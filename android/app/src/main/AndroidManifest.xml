@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="andriod.permission.WRITE_EXTERNAL_STORAGE"/>
->
 
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="HostelEase"
         android:name="${applicationName}"
