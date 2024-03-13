@@ -7,12 +7,17 @@ import 'package:hostel_ease/screens/common/choose_role.dart';
 import 'package:hostel_ease/firebase_options.dart';
 import 'package:hostel_ease/screens/student/student_menu.dart';
 import 'package:hostel_ease/screens/warden/warden_menu.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Permission.storage.request();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Request external storage permission
+
   runApp(const MyApp());
 }
 
